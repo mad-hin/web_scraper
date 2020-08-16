@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d5fd4eee-d2e6-4ac9-9313-0322c9983371" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go Application" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="GoLibraries">
+    <option name="urls">
+      <list>
+        <option value="file://$PROJECT_DIR$" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1gBNxvr3Q83H0IStJQ4XJZXmYlR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go Application" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.go" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager">
+    <configuration name="go build web_scraper/" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="web_scraper" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <kind value="DIRECTORY" />
+      <filePath value="$PROJECT_DIR$/../web_scraper|$PROJECT_DIR$/main.go" />
+      <directory value="$PROJECT_DIR$" />
+      <output_directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5fd4eee-d2e6-4ac9-9313-0322c9983371" name="Default Changelist" comment="" />
+      <created>1597584278069</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597584278069</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="752" y="183" key="#GOPATH" timestamp="1597584425080">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="752" y="183" key="#GOPATH/0.0.1920.1050@0.0.1920.1050" timestamp="1597584425080" />
+    <state x="414" y="180" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597584643749">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="414" y="180" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1597584643749" />
+    <state x="822" y="283" key="EnvironmentVariablesDialog" timestamp="1597584638811">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="822" y="283" key="EnvironmentVariablesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1597584638811" />
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1597584619145">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1597584619145" />
+    <state x="826" y="422" key="Github.ShareDialog" timestamp="1597584706460">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="826" y="422" key="Github.ShareDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1597584706460" />
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1597584655810">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1597584655810" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1597584655810">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1597584655810" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1597584655810">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1597584655810" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1597584655810">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1597584655810" />
+    <state x="461" y="169" key="SettingsEditor" timestamp="1597584325793">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="169" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1597584325793" />
+  </component>
+</project>
