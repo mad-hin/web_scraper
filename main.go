@@ -8,6 +8,9 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"os/exec"
+	"runtime"
+	"strings"
 	"time"
 )
 
@@ -43,14 +46,58 @@ func getHTTPRequest(httpLink string) {
 	}
 }
 
+func downloader(httpLink string) {
+
+}
+
+func option() {
+	fmt.Println("What do you want to do ?")
+	fmt.Println("[1] See website source code")
+	fmt.Println("[2] Download a URL")
+	fmt.Println("Please input the corresponding number of the action you would like to do")
+}
+
+var clear map[string]func() //create a map for storing clear funcs
+
+func init() {
+	clear = make(map[string]func()) //Initialize it
+	clear["linux"] = func() {
+		cmd := exec.Command("reset") //Linux example, its tested
+		cmd.Stdout = os.Stdout
+		cmd.Run()
+	}
+	clear["windows"] = func() {
+		cmd := exec.Command("cmd", "/c", "cls") //Windows example, its tested
+		cmd.Stdout = os.Stdout
+		cmd.Run()
+	}
+}
+
+func CallClear() {
+	value, ok := clear[runtime.GOOS] //runtime.GOOS -> linux, windows, darwin etc.
+	if ok {                          //if we defined a clear func for that platform:
+		value() //we execute it
+	} else { //unsupported platform
+		panic("Your platform is unsupported! I can't clear terminal screen :(")
+	}
+}
+
 func main() {
-	reader := bufio.NewReader(os.Stdin)
-	fmt.Println("Please input a link:")
-	link, _, err := reader.ReadLine()
-	// Print error (if any)
-	if err != nil {
-		log.Fatal(err)
-	} else {
-		getHTTPRequest(string(link))
+	for true {
+		reader := bufio.NewReader(os.Stdin)
+		option()
+		input, err := reader.ReadString('\n')
+		// Print error (if any)
+		if err != nil {
+			log.Fatal(err)
+		} else if strings.TrimRight(input, "\n") == "1" {
+			fmt.Println("Please input the link or type 'b' to go back to option")
+			read, _ := reader.ReadString('\n')
+			if strings.TrimRight(read, "\n") == "b" || strings.TrimRight(read, "\n") == "B" {
+				CallClear()
+			} else {
+				getHTTPRequest(read)
+			}
+		}
 	}
 }
