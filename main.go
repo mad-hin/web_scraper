@@ -10,13 +10,11 @@ import (
 	"os"
 	"os/exec"
 	"runtime"
-	"strings"
 	"time"
 )
 
 func getHTTPRequest(httpLink string) {
 	random := browser.Random()
-	log.Printf("Random: %s", random)
 
 	// get request with timeout
 	client := &http.Client{
@@ -47,7 +45,40 @@ func getHTTPRequest(httpLink string) {
 }
 
 func downloader(httpLink string) {
+	random := browser.Random()
 
+	// get request with timeout
+	client := &http.Client{
+		Timeout: 30 * time.Second,
+	}
+
+	// Create and modify HTTP request before sending
+	request, err := http.NewRequest("Get", httpLink, nil)
+	// Print error (if any)
+	if err != nil {
+		log.Fatal(err, "request fail")
+	}
+	request.Header.Set("User-Agent", random)
+
+	// Make HTTP GET request
+	response, err := client.Do(request)
+	if err != nil {
+		log.Fatal(err, "response fail")
+	}
+	defer response.Body.Close()
+
+	// Create output file
+	outFile, err := os.Create("output.html")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer outFile.Close()
+
+	// Copy data from HTTP response to file
+	_, err = io.Copy(outFile, response.Body)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
 
 func option() {
@@ -64,12 +95,12 @@ func init() {
 	clear["linux"] = func() {
 		cmd := exec.Command("reset") //Linux example, its tested
 		cmd.Stdout = os.Stdout
-		cmd.Run()
+		_ = cmd.Run()
 	}
 	clear["windows"] = func() {
 		cmd := exec.Command("cmd", "/c", "cls") //Windows example, its tested
 		cmd.Stdout = os.Stdout
-		cmd.Run()
+		_ = cmd.Run()
 	}
 }
 
@@ -86,17 +117,25 @@ func main() {
 	for true {
 		reader := bufio.NewReader(os.Stdin)
 		option()
-		input, err := reader.ReadString('\n')
+		input, _, err := reader.ReadLine()
 		// Print error (if any)
 		if err != nil {
 			log.Fatal(err)
-		} else if strings.TrimRight(input, "\n") == "1" {
+		} else if string(input) == "1" {
 			fmt.Println("Please input the link or type 'b' to go back to option")
-			read, _ := reader.ReadString('\n')
-			if strings.TrimRight(read, "\n") == "b" || strings.TrimRight(read, "\n") == "B" {
+			read, _, _ := reader.ReadLine()
+			if string(read) == "b" || string(read) == "B" {
 				CallClear()
 			} else {
-				getHTTPRequest(read)
+				getHTTPRequest(string(read))
+			}
+		} else if string(input) == "2" {
+			fmt.Println("Please input the link or type 'b' to go back to option")
+			read, _, _ := reader.ReadLine()
+			if string(read) == "b" || string(read) == "B" {
+				CallClear()
+			} else {
+				downloader(string(read))
 			}
 		}
 	}
