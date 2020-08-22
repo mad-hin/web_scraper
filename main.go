@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	browser "github.com/EDDYCJY/fake-useragent"
+	"github.com/PuerkitoBio/goquery"
 	"io"
 	"log"
 	"net/http"
@@ -85,10 +86,11 @@ func option() {
 	fmt.Println("What do you want to do ?")
 	fmt.Println("[1] See website source code")
 	fmt.Println("[2] Download a URL")
+	fmt.Println("[3] Find all the Link in the website")
 	fmt.Println("Please input the corresponding number of the action you would like to do")
 }
 
-var clear map[string]func() //create a map for storing clear funcs
+var clear map[string]func() //create a map for storing clear func
 
 func init() {
 	clear = make(map[string]func()) //Initialize it
@@ -113,6 +115,52 @@ func CallClear() {
 	}
 }
 
+func processElement(_ int, item *goquery.Selection) {
+	// See if the href attribute exists on the element
+	href, exists := item.Attr("href")
+	if exists {
+		fmt.Println(href)
+	}
+}
+
+func findLink(httpLink string) {
+	random := browser.Random()
+
+	// get request with timeout
+	client := &http.Client{
+		Timeout: 30 * time.Second,
+	}
+
+	// Create and modify HTTP request before sending
+	request, err := http.NewRequest("Get", httpLink, nil)
+	// Print error (if any)
+	if err != nil {
+		log.Fatal(err, "request fail")
+	}
+	request.Header.Set("User-Agent", random)
+
+	// Make HTTP GET request
+	response, err := client.Do(request)
+	if err != nil {
+		log.Fatal(err, "response fail")
+	}
+	defer response.Body.Close()
+
+	// Create a goquery document from the HTTP response
+	document, err := goquery.NewDocumentFromReader(response.Body)
+	if err != nil {
+		log.Fatal("Error loading HTTP response body. ", err)
+	}
+
+	// Find all links and process them with the function
+	// defined earlier
+	document.Find("a").Each(processElement)
+}
+
+func goBack() {
+	fmt.Println("Please input the link or type 'b' to go back to option")
+}
+
 func main() {
 	for true {
 		reader := bufio.NewReader(os.Stdin)
@@ -122,7 +170,7 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		} else if string(input) == "1" {
-			fmt.Println("Please input the link or type 'b' to go back to option")
+			goBack()
 			read, _, _ := reader.ReadLine()
 			if string(read) == "b" || string(read) == "B" {
 				CallClear()
@@ -130,12 +178,20 @@ func main() {
 				getHTTPRequest(string(read))
 			}
 		} else if string(input) == "2" {
-			fmt.Println("Please input the link or type 'b' to go back to option")
+			goBack()
 			read, _, _ := reader.ReadLine()
 			if string(read) == "b" || string(read) == "B" {
 				CallClear()
 			} else {
 				downloader(string(read))
+			}
+		} else if string(input) == "3" {
+			goBack()
+			read, _, _ := reader.ReadLine()
+			if string(read) == "b" || string(read) == "B" {
+				CallClear()
+			} else {
+				findLink(string(read))
 			}
 		}
 	}

@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5fd4eee-d2e6-4ac9-9313-0322c9983371" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go_build_web_scraper_.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go_build_web_scraper_.exe" beforeDir="false" afterPath="$PROJECT_DIR$/go_build_web_scraper_.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597934492695</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update 21/08/2020">
+      <created>1598020443486</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598020443486</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +133,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update 17/08/2020" />
     <MESSAGE value="update 20/08/2020" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 20/08/2020" />
+    <MESSAGE value="update 21/08/2020" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 21/08/2020" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -146,6 +156,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="656" y="325" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1598019118963" />
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598020563563">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="690" y="271" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1598020563563" />
     <state x="92" y="92" width="1736" height="866" key="DiffContextDialog" timestamp="1598019172616">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -166,33 +180,37 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="732" y="229" key="Github.UntrackedFilesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1597585464173" />
-    <state width="938" height="285" key="GridCell.Tab.0.bottom" timestamp="1598020322583">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1598106823661">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="938" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1598020322583" />
-    <state width="938" height="285" key="GridCell.Tab.0.center" timestamp="1598020322583">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1598106823661" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1598106823660">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="938" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1598020322583" />
-    <state width="938" height="285" key="GridCell.Tab.0.left" timestamp="1598020322583">
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1598106823660" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1598106823660">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="938" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1598020322583" />
-    <state width="938" height="285" key="GridCell.Tab.0.right" timestamp="1598020322583">
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1598106823660" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1598106823661">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="938" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1598020322583" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1598106823661" />
     <state x="461" y="169" key="SettingsEditor" timestamp="1597632177340">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="461" y="169" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1597632177340" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1597934501455">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1598020449798">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1597934501455" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1598020449798" />
     <state x="770" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597725047113">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="770" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1597725047113" />
+    <state x="801" y="281" key="refactoring.ChangeSignatureDialog" timestamp="1598106524223">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="801" y="281" key="refactoring.ChangeSignatureDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1598106524223" />
   </component>
 </project>
